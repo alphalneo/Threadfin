@@ -137,6 +137,7 @@ func loadSettings() (settings SettingsStruct, err error) {
 	defaults["epgSource"] = "PMS"
 	defaults["ffmpeg.options"] = System.FFmpeg.DefaultOptions
 	defaults["vlc.options"] = System.VLC.DefaultOptions
+	defaults["custom.options"] = System.CUSTOM.DefaultOptions
 	defaults["files"] = dataMap
 	defaults["files.update"] = true
 	defaults["filter"] = make(map[string]interface{})
@@ -198,6 +199,9 @@ func loadSettings() (settings SettingsStruct, err error) {
 		settings.VLCPath = searchFileInOS("cvlc")
 	}
 
+	if len(settings.CustomPath) == 0 {
+		settings.CustomPath = searchFileInOS("cvlc")
+	}
 	// Initialze virutal filesystem for the Buffer
 	initBufferVFS()
 
@@ -217,6 +221,9 @@ func loadSettings() (settings SettingsStruct, err error) {
 		showWarning(2021)
 	}
 
+	if len(Settings.CustomPath) == 0 && Settings.Buffer == "custom" {
+		showWarning(2022)
+	}
 	return settings, nil
 }
 
