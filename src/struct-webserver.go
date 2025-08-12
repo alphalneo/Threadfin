@@ -36,6 +36,9 @@ type RequestStruct struct {
 		FfmpegForceHttp          *bool     `json:"ffmpeg.forceHttp,omitempty"`
 		VLCOptions               *string   `json:"vlc.options,omitempty"`
 		VLCPath                  *string   `json:"vlc.path,omitempty"`
+    	CustomOptions                *string   `json:"custom.options,omitempty"`
+		CustomPath                  *string   `json:"custom.path,omitempty"`
+		
 		FilesUpdate              *bool     `json:"files.update,omitempty"`
 		TempPath                 *string   `json:"temp.path,omitempty"`
 		Tuner                    *int      `json:"tuner,omitempty"`
