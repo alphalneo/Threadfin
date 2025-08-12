@@ -34,7 +34,10 @@ type SystemStruct struct {
 		DefaultOptions string
 		Path           string
 	}
-
+	CUSTOM struct {
+		DefaultOptions string
+		Path           string
+	}
 	File struct {
 		Authentication string
 		M3U            string
@@ -302,6 +305,8 @@ type SettingsStruct struct {
 	FFmpegForceHttp   bool     `json:"ffmpeg.forceHttp"`
 	VLCOptions        string   `json:"vlc.options"`
 	VLCPath           string   `json:"vlc.path"`
+	CustomOptions        string   `json:"custom.options"`
+	CustomPath           string   `json:"custom.path"`
 	FileM3U           []string `json:"file,omitempty"`  // Beim Wizard wird die M3U in ein Slice gespeichert
 	FileXMLTV         []string `json:"xmltv,omitempty"` // Altes Speichersystem der Provider XML Datei Slice (Wird für die Umwandlung auf das neue benötigt)
 
