@@ -1395,8 +1395,8 @@ function openPopUp(dataType, element) {
       input.setAttribute("placeholder", "{{.playlist.fileM3U.placeholder}}")
       content.appendRow("{{.playlist.fileM3U.title}}", input)
 
-      var text: string[] = ["-", "FFmpeg", "VLC"]
-      var values: string[] = ["-", "ffmpeg", "vlc"]
+      var text: string[] = ["-", "FFmpeg", "VLC","Custom"]
+      var values: string[] = ["-", "ffmpeg", "vlc","custom"]
       var selected = SERVER["settings"]["buffer"]
       if (data["buffer"] != undefined) {
         selected = data["buffer"]
@@ -1496,8 +1496,8 @@ function openPopUp(dataType, element) {
       input.setAttribute("placeholder", "{{.playlist.fileHDHR.placeholder}}")
       content.appendRow("{{.playlist.fileHDHR.title}}", input)
 
-      var text: string[] = ["-", "FFmpeg", "VLC"]
-      var values: string[] = ["-", "ffmpeg", "vlc"]
+      var text: string[] = ["-", "FFmpeg", "VLC","Custom"]
+      var values: string[] = ["-", "ffmpeg", "vlc","custom"]
       var selected = SERVER["settings"]["buffer"]
       if (data["buffer"] != undefined) {
         selected = data["buffer"]
